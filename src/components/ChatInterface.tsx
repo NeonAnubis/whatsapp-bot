@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { Send, Paperclip, MoreVertical, Search } from 'lucide-react';
+import { Send, Paperclip, MoreVertical, Search, Home } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import type { Message } from '../types';
 import { BotConversationManager } from '../utils/botLogic';
 import { simulateTypingDelay, delay, generateId, simulateImageUpload } from '../utils/helpers';
@@ -258,6 +259,13 @@ const ChatInterface = () => {
       {/* Header */}
       <div className="bg-whatsapp-panel border-b border-whatsapp-hover px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
+          <Link
+            to="/"
+            className="p-2 hover:bg-whatsapp-hover rounded-full transition text-gray-400 hover:text-white"
+            title="Volver al inicio"
+          >
+            <Home className="w-5 h-5" />
+          </Link>
           <img
             src="https://i.pravatar.cc/150?img=25"
             alt="Support"

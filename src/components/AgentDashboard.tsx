@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Users,
   MessageSquare,
@@ -13,6 +14,7 @@ import {
   TrendingUp,
   Activity,
   UserCheck,
+  Home,
 } from 'lucide-react';
 import type { Agent, Customer } from '../types';
 import { mockAgents, mockCustomers } from '../data/mockData';
@@ -104,6 +106,13 @@ const AgentDashboard = () => {
               Panel de Agentes
             </h1>
             <div className="flex gap-2">
+              <Link
+                to="/"
+                className="p-2 hover:bg-whatsapp-hover rounded-full transition"
+                title="Volver al inicio"
+              >
+                <Home className="w-5 h-5 text-gray-400 hover:text-white" />
+              </Link>
               <button className="p-2 hover:bg-whatsapp-hover rounded-full transition">
                 <Bell className="w-5 h-5 text-gray-400" />
               </button>
