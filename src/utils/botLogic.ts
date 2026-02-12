@@ -1,4 +1,4 @@
-import type { Message, ConversationData, ServiceOption, Question } from '../types';
+import type { Message, ConversationData, ServiceOption } from '../types';
 import { generateId } from './helpers';
 import { serviceOptions } from '../data/mockData';
 
